@@ -11,7 +11,6 @@ import { FirebaseError } from "firebase/app";
 
 export default function SignInForm() {
     const [user, loading] = useAuthState(auth);
-    const router = useRouter()
     const [errMsg, setErrMsg] = useState('')
 
     if (loading) {
@@ -22,7 +21,7 @@ export default function SignInForm() {
         redirect('/dashboard')
     }
 
-    const getErrMsg = (code) => {
+    const getErrMsg = (code: any) => {
         switch (code) {
             case 'auth/user-not-found':
                 console.log('asdasda')
