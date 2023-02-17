@@ -7,6 +7,7 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "@/firebase"
 import { useState } from "react";
 import { FirebaseError } from "firebase/app";
+import Input from "./Input";
 
 
 export default function SignInForm() {
@@ -54,35 +55,10 @@ export default function SignInForm() {
 
     return <form onSubmit={handleSubmit}>
         <div className="mb-4">
-            <p className="text-red-500 text-xs italic">{errMsg}</p>
-            <label
-                className="block text-gray-700 text-xs mb-1"
-                htmlFor="username"
-            >
-                Username
-            </label>
-            <input
-                className="shadow-sm appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="username"
-                name="username"
-                type="text"
-                placeholder="Username"
-            />
+            <Input />
         </div>
         <div className="mb-4">
-            <label
-                className="block text-gray-700 text-xs mb-1"
-                htmlFor="password"
-            >
-                Password
-            </label>
-            <input
-                className="shadow-sm appearance-none border w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                id="password"
-                name="password"
-                type="password"
-                placeholder="•••••••••••"
-            />
+            <Input />
             {/* <p className="text-red-500 text-xs italic">Please choose a password.</p> */}
         </div>
         <div className="flex items-center justify-between mb-6">
