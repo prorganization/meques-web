@@ -1,4 +1,5 @@
 import Header from "@/components/Header"
+import Sidebar from "@/components/Sidebar";
 
 export default function Layout({
     children,
@@ -7,9 +8,12 @@ export default function Layout({
 }) {
 
     return <>
-        <div className="w-screen h-screen bg-homepage bg-no-repeat bg-cover">
+        <div className="w-screen h-screen flex-1 flex flex-col bg-homepage bg-no-repeat bg-cover">
             <Header />
-            {children}
+            <div className="flex h-full">
+                <Sidebar />
+                {children}
+            </div>
         </div>
     </>
 }
