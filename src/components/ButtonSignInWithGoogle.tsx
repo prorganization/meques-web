@@ -1,9 +1,12 @@
 "use client"
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth"
 
 
 import { auth } from "@/firebase"
-import { useRouter } from "next/navigation";
+import Button from "./Button";
+import googlePlay from "../../public/google-play.png"
 
 
 export default function ButtonSignInWithGoogle() {
@@ -14,17 +17,15 @@ export default function ButtonSignInWithGoogle() {
     async function handleSignWithGoogle(event: React.SyntheticEvent<HTMLButtonElement>) {
         event.preventDefault();
         try {
-            const response = await signInWithPopup(auth, provider);
-            console.log(response)
+            await signInWithPopup(auth, provider);
             router.push("/dashboard")
         } catch (error) {
             alert(error);
         }
     }
 
-    return <button className="hover:bg-gray-100 bg-gray-50 border-gray-50 border-solid border text-blue-600 font-bold uppercase text-sm py-2 px-4  focus:outline-none focus:shadow-outline"
-        onClick={handleSignWithGoogle}>
-        Sign In With Google
-    </button>
+    return <Button className="h-[32px]" variant="secondary" icon={<Image width={22} height={22} src={googlePlay} alt="Google Play"/>} onClick={handleSignWithGoogle}>
+        Google Play
+    </Button>
 
 }

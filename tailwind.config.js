@@ -13,13 +13,15 @@ module.exports = {
         'auth-container': '1px 1px 20px 0px rgba(255, 255, 255, 0.1)',
       },
       borderRadius: {
-        'input': '5px'
+        'input': '5px',
+        'button': '5px',
       },
       maxWidth: {
-        'input': '310px'
+        'input': '310px',
       },
       height: {
         'input': '30px',
+        'button': '30px',
       },
       colors: {
         "main-purple": {

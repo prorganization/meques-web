@@ -1,17 +1,15 @@
 "use client"
-import Link from "next/link";
-import { useAuthState } from "react-firebase-hooks/auth"
+import Image from "next/image";
 
-import { auth } from "@/firebase"
+
+import Button from "./Button";
+import wallet from "../../public/wallet.svg"
 
 
 export default function ButtonConnectWallet() {
-    const [user, loading] = useAuthState(auth);
 
-    if (loading) {
-        return <div>...</div>
-    }
-
-    return user && 'connect wallet'
+    return <Button className="h-[32px]" variant="secondary" icon={<Image width={22} height={22} src={wallet} alt="Wallet"/>}>
+        Wallet
+    </Button>
 
 }
