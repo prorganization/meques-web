@@ -7,16 +7,20 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/firebase";
 import RegisterForm from "@/components/RegisterForm";
 import ButtonSignInWithGoogle from "@/components/ButtonSignInWithGoogle";
-import ButtonConnectWallet from "@/components/ButtonConnectWallet";
-
+// import { useState } from "react";
 
 export default function Page() {
 
     const [user, loading] = useAuthState(auth);
+    
 
     if (user) {
-        redirect('/dashboard')
+        redirect('/')
     }
+
+    // const handleOnAccountCreated = () => {
+    //     console.log('go to account created screen')
+    // }
 
     return (
 
@@ -25,7 +29,7 @@ export default function Page() {
                 <h1 className="mb-6 text-gold text-center text-xl font-medium">
                     Create Game Account
                 </h1>
-                {loading ?
+                { loading ?
 
                     <div className="text-gold h-48 flex items-center">Loading...</div> :
 

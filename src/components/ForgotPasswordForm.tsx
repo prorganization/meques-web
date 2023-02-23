@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
-import { redirect } from "next/navigation";
-import { signInWithEmailAndPassword } from "firebase/auth";
+
+import { sendPasswordResetEmail } from "firebase/auth";
 import { FirebaseError } from "firebase/app";
 
 import { auth } from "@/firebase"
@@ -9,15 +9,15 @@ import Input from "./Input";
 import Button from "./Button";
 
 
-export default function SignInForm() {
+export default function ForgotPasswordForm() {
     const [errMsg, setErrMsg] = useState('')
 
-    const getErrMsg = (code: any) => {
-        switch (code) {
+    const getErrMsg = (err: FirebaseError) => {
+        switch (err.code) {
             case 'auth/invalid-email':
                 return 'Email entered is invalid.'
             case 'auth/user-not-found':
-                return 'User not found.'
+                return 'Email entered was not found.'
             default:
                 return 'Internal error'
         }
@@ -34,11 +34,12 @@ export default function SignInForm() {
         }
 
         try {
-            await signInWithEmailAndPassword(auth, formElements.username.value, formElements.password.value);
-            redirect("/dashboard")
-        } catch (error) {
+            const response = await sendPasswordResetEmail(auth, formElements.username.value);
+            console.log(response)
+        } catch (error: any) {
             if (error instanceof FirebaseError) {
-                setErrMsg(getErrMsg(error.code));
+                console.log(error.code)
+                setErrMsg(getErrMsg(error));
             }
         }
     }
@@ -46,13 +47,10 @@ export default function SignInForm() {
     return <form className="w-full" onSubmit={handleSubmit}>
         {errMsg && <div className="text-red-500 text-sm mb-3">{errMsg}</div>}
         <div className="mb-3">
-            <Input type="text" name="username" placeholder="Username" />
+            <Input type="text" name="username" placeholder="Email" />
         </div>
-        <div className="mb-3">
-            <Input type="password" name="password" placeholder="•••••••••••" />
-            {/* <p className="text-red-500 text-xs italic">Please choose a password.</p> */}
-        </div>
-        <Button className="block bg-gold text-black w-full" type="submit">Sign In</Button>
+        <Button className="block bg-gold text-black w-full" type="submit">Send recover email.</Button>
     </form>
+    
 
 }
