@@ -1,4 +1,5 @@
 "use client"
+
 import Link from "next/link";
 import { redirect, useRouter } from "next/navigation";
 import { signInWithEmailAndPassword } from "firebase/auth";

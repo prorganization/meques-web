@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         homepage: "url('/hero-bkg.png')",
+        'dark-glow': 'radial-gradient(50% 75% at 50% 75%, rgba(0, 0, 0, 0.65) 0%, rgba(29, 26, 44, 0) 100%);',
       },
       colors: {
         "main-purple": {

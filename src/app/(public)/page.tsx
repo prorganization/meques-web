@@ -1,53 +1,38 @@
-import Image from "next/image";
-import Link from "next/link";
-import ButtonPlay from "@/components/ButtonPlay ";
-import ButtonEarnNow from "@/components/ButtonEarnNow";
+"use client"
+
+import { useState } from 'react';
+
 import SocialMedia from "@/components/SocialMedia"
+import Footer from '@/components/Footer';
+import Image from "next/image";
+import HomeSlider from "@/components/HomeSlider";
+import Slide1 from "@/components/home-slides/Slide1"
+import Slide2 from "@/components/home-slides/Slide2"
+import Slide3 from "@/components/home-slides/Slide3"
+import Slide4 from "@/components/home-slides/Slide4"
+import Slide5 from "@/components/home-slides/Slide5"
 
-import rewardIco from "../../../public/icons/reward-icon.svg"
-import banner1 from "../../../public/banners/image33.png"
-import banner2 from "../../../public/banners/image21.png"
+import downloadGameFlag from "../../../public/download-game-flag.png"
 
-export default async function Home() {
-  return (
-    <div className="h-full w-full flex flex-col justify-center items-center">
-        <div className="flex">
-            <div>
-                <div className="boder-solid border-y-2 border-gold pt-4 pb-10">
-                    <h1 className="mb-12 text-4xl text-gold font-medium">International<br />MEQUES Cup 2022</h1>
-                    <div className="text-white font-normal text-base">
-                        <p>Come celebrate with us and be the best jockey of the year</p>
-                        <p className="flex mt-3.5">Reward pool: <Image src={rewardIco} alt="Reward icon." className="ml-1 mr-2"/> 18,888</p>
-                    </div>
-                </div>
-                <div className="pt-16">
-                    <ButtonPlay/>
-                </div>
-            </div>
-            <div>
-                <Image src={banner1} alt="Banner." className="ml-14"/>
-            </div>
-        </div>
+export default function Home() {
+    const slides = [
+        <Slide1 />,
+        <Slide2 />,
+        <Slide3 />,
+        <Slide4 />,
+        <Slide5 />
+    ];
 
-        <div className="flex">
-            <div>
-                <p className="text-white font-normal text-base">11.11.23</p>
-                <h1 className="my-1.5 text-4xl text-gold font-medium">Latest season Player<br/>Standings</h1>
-                <p className="text-white font-normal text-base">Last Season Player Standings</p>
-                <div className="bg-main-purple-darker rounded-md my-5 p-4">
-                    <p>Therealpeter</p>
-                </div>
-                <div className="">
-                    <ButtonEarnNow />
-                </div>
-            </div>
-            <div>
-                <Image src={banner2} alt="Banner." className="ml-14"/>
+    return (
+        <div className="h-full w-full flex flex-col justify-center items-center">
+            <HomeSlider slides={slides} />
+
+            <Image src={downloadGameFlag} alt="Download game." className="absolute bottom-0 right-0" />
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+                <SocialMedia />
+                <Footer />
             </div>
         </div>
 
-        <SocialMedia/>
-    </div>
-    
-  )
+    )
 } 
