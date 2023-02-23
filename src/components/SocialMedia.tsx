@@ -11,16 +11,16 @@ import instagram from "../../public/icons/instagram.svg"
 export default function SocialMedia() {
     const segment = useSelectedLayoutSegment();
 
-    return <div className="w-fit mx-auto relative">
-        <div className="flex px-14 bg-dark-glow bg-no-repeat gap-x-11 pb-7  ">
+    return <div className="absolute bottom-0 w-full">
+        <div className="flex justify-center gap-x-10 mb-7">
             <Link className="" href="/settings">
-                <Image src={discord} alt="Discord" className="mr-1.5"/>
+                <Image src={discord} alt="Discord"/>
             </Link>
             <Link className="" href="/settings">
-                <Image src={twitter} alt="Twitter" className="mr-1.5"/>
+                <Image src={twitter} alt="Twitter"/>
             </Link>
             <Link className="" href="/settings">
-                <Image src={instagram} alt="Instagram" className="mr-1.5"/>
+                <Image src={instagram} alt="Instagram"/>
             </Link>
         </div>
     </div>

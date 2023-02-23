@@ -1,5 +1,8 @@
+import Image from "next/image";
 import Header from "@/components/Header"
 import Sidebar from "@/components/Sidebar";
+import downloadGameFlag from "../../../public/download-game-flag.png"
+import SocialMedia from "@/components/SocialMedia";
 
 export default function Layout({
     children,
@@ -8,12 +11,12 @@ export default function Layout({
 }) {
 
     return <>
-        <div className="w-screen h-screen flex-1 flex flex-col bg-homepage bg-no-repeat bg-cover">
+        <div className="w-screen h-screen">
             <Header />
-            <div className="flex h-full">
-                <Sidebar />
-                {children}
-            </div>
+            <Sidebar />
+            <Image src={downloadGameFlag} alt="Download game." className="absolute bottom-2 right-0" />
+            {children}
+            <SocialMedia />
         </div>
     </>
 }

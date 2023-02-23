@@ -11,7 +11,7 @@ import screenshot3 from "../../../public/game-screenshot-3.png"
 
 
 export default function Slide4() {
-    return <div className="h-full w-full flex flex-col justify-center items-center">
+    return <div className="h-full w-full flex flex-col justify-center bg-no-repeat  bg-contain bg-right bg-main-purple-darker bg-quests pl-[205px]">
         <div className="flex mb-8">
             <h1 className="mr-20 mb-3.5 text-4xl font-medium text-gold">Complete Quests To Earn</h1>
         </div>

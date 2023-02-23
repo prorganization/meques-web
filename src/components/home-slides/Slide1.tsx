@@ -7,7 +7,7 @@ import rewardIco from "../../../public/icons/reward-icon.svg"
 import banner1 from "../../../public/banners/homepage-banner-1.png"
 
 export default function Slide1() {
-    return <div className="h-full w-full flex flex-col justify-center items-center">
+    return <div className=" bg-homepage bg-no-repeat bg-cover h-full w-full flex items-center pl-[205px]">
         <div className="flex">
             <div>
                 <div className="boder-solid border-y-2 border-gold pt-4 pb-10">
@@ -25,5 +25,6 @@ export default function Slide1() {
                 <Image src={banner1} alt="Banner." className="ml-14" />
             </div>
         </div>
+        <div className="absolute w-[488px] h-[162px] bottom-0 bg-social-dark-glow left-1/2 transform -translate-x-1/2"></div>
     </div>
 } 
