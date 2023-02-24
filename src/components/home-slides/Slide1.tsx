@@ -7,7 +7,7 @@ import rewardIco from "../../../public/icons/reward-icon.svg"
 import banner1 from "../../../public/banners/homepage-banner-1.png"
 
 export default function Slide1() {
-    return <div className=" bg-homepage bg-no-repeat bg-cover h-full w-full flex items-center pl-[205px]">
+    return <div className=" bg-homepage bg-no-repeat bg-cover h-full w-full flex items-center justify-center">
         <div className="flex">
             <div>
                 <div className="boder-solid border-y-2 border-gold pt-4 pb-10">

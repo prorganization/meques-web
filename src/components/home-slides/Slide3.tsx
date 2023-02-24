@@ -6,7 +6,7 @@ import liveStreamCover from "../../../public/live-stream-cover.png"
 import profileImage from "../../../public/profile-image-square.png"
 
 export default function Slide3() {
-    return <div className="h-full w-full flex items-center bg-no-repeat bg-right-top bg-shadow-black bg-live-stream bg- pl-[205px]">
+    return <div className="h-full w-full flex items-center bg-no-repeat bg-right-top bg-shadow-black bg-live-stream justify-center">
         <div>
             <div className="mb-8 w-full">
                 <h1 className="mb-3.5 text-4xl text-gold">Live Stream</h1>
