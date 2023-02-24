@@ -11,7 +11,7 @@ import ButtonSignIn from "./ButtonAuthentication";
 export default function Header() {
     const segment = useSelectedLayoutSegment();
 
-    return <header className="absolute w-full h-header flex justify-between items-center px-10 bg-shadow-black/70">
+    return <header className="absolute z-10 w-full h-header flex justify-between items-center px-10 bg-shadow-black/70">
         <div>
             <Link href="/">
                 <Image unoptimized src={logo} alt="Meques Logo" />

@@ -15,13 +15,13 @@ import Slide5 from "@/components/home-slides/Slide5"
 
 
 export default function Home() {
-    // const slides = [
-    //     <Slide1 />,
-    //     <Slide2 />,
-    //     <Slide3 />,
-    //     <Slide4 />,
-    //     <Slide5 />
-    // ];
+    const slides = [
+        <Slide1 />,
+        <Slide2 />,
+        <Slide3 />,
+        <Slide4 />,
+        <Slide5 />
+    ];
 
-    return <Slide5 />
+    return <HomeSlider slides={slides}/>
 } 

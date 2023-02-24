@@ -13,7 +13,7 @@ import marketplaceIco from "../../public/icons/marketplace.svg";
 export default function Sidebar() {
     const segment = useSelectedLayoutSegment();
 
-    return <nav className="absolute top-header h-[calc(100%_-_58px)] flex bg-shadow-black/30 font-medium text-sm text-gold ">
+    return <nav className="absolute top-header h-[calc(100%_-_58px)] z-10 flex bg-shadow-black/30 font-medium text-sm text-gold ">
         <div className="px-5 flex flex-col justify-center">
             <Link className="flex mb-7" href="/dashboard">
                 <Image src={membershipIco} alt="Membership icon." className="mr-1.5" /> Membership
