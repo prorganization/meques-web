@@ -2,9 +2,6 @@
 
 import { useState } from 'react';
 
-import SocialMedia from "@/components/SocialMedia"
-import Footer from '@/components/Footer';
-import Image from "next/image";
 import HomeSlider from "@/components/HomeSlider";
 import Slide1 from "@/components/home-slides/Slide1"
 import Slide2 from "@/components/home-slides/Slide2"
