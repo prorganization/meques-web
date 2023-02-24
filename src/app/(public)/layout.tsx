@@ -14,7 +14,7 @@ export default function Layout({
         <div className="w-screen h-screen">
             <Header />
             <Sidebar />
-            <Image src={downloadGameFlag} alt="Download game." className="absolute bottom-2 right-0" />
+            <Image src={downloadGameFlag} alt="Download game." className="absolute bottom-2 right-0 z-10" />
             {children}
             <SocialMedia />
         </div>
