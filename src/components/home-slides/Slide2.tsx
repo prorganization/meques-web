@@ -9,7 +9,7 @@ import playerBadge from "../../../public/icons/player-badge.svg"
 import chestIco from "../../../public/icons/chest.svg"
 
 export default function Slide2() {
-    return <div className="bg-homepage bg-no-repeat bg-cover h-full w-full flex items-center pl-[205px]">
+    return <div className="bg-homepage bg-no-repeat bg-cover h-full w-full flex items-center justify-center">
         <div className="flex">
             <div>
                 <p className="text-white font-normal text-base">11.11.23</p>

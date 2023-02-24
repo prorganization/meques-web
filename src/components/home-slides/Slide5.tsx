@@ -8,7 +8,7 @@ import pinIco from "../../../public/icons/pin.svg"
 import missionIco from "../../../public/icons/mission-1.svg"
 
 export default function Slide3() {
-    return <div className="h-full w-full flex flex-col justify-center items-center bg-no-repeat bg-center bg-shadow-black bg-membership pl-[205px]">
+    return <div className="h-full w-full flex flex-col justify-center items-center bg-no-repeat bg-center bg-shadow-black bg-membership">
         <div className="flex mb-8 items-center">
             <h1 className="mr-20 mb-3.5 text-4xl font-medium text-gold">Join Membership To<br />Win And Earn!</h1>
             <Image src={goldMembershipBadge} alt="Live stream." />
