@@ -12,7 +12,7 @@ export default function Layout({
 
     return <>
         <div className="w-screen h-screen bg-shadow-black">
-            <Header className="absolute" />
+            <Header className="absolute z-10" />
             <Sidebar />
             <Image src={downloadGameFlag} alt="Download game." className="absolute bottom-2 right-0 z-10" />
             {children}

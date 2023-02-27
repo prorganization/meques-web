@@ -9,8 +9,11 @@ import leaderboardIco from "../../public/icons/ranking.svg";
 import questsIco from "../../public/icons/mission.svg";
 import raceIco from "../../public/icons/race.svg";
 import marketplaceIco from "../../public/icons/marketplace.svg";
+import { HTMLAttributes } from "react";
 
-export default function Sidebar() {
+interface SidebarProps extends HTMLAttributes<HTMLElement> { }
+
+export default function Sidebar({ className }: SidebarProps) {
     const segment = useSelectedLayoutSegment();
 
     return <nav className="absolute top-header h-[calc(100%_-_58px)] z-10 flex bg-shadow-black/30 font-medium text-sm text-gold ">

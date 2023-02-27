@@ -11,7 +11,7 @@ import ButtonSignIn from "./ButtonAuthentication";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/firebase";
 
-interface HeaderProps extends HTMLAttributes<HTMLHeadElement> { }
+interface HeaderProps extends HTMLAttributes<HTMLElement> { }
 
 export default function Header({ className }: HeaderProps) {
     const segment = useSelectedLayoutSegment();
