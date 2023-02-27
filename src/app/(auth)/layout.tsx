@@ -11,9 +11,9 @@ export default function Layout({
     return <>
         <div className="w-screen h-screen bg-main-purple-darker">
 
-            <Image src={authBg} alt="Auth bg." className="absolute bottom-0 left-0 top-0 z-0"/>
+            <Image priority src={authBg} alt="Auth bg." className="absolute bottom-0 left-0 top-0 z-0 pointer-events-none"/>
             <Header />
-            <div className="w-full h-[calc(100%_-_4rem)] flex flex-col justify-center items-center">
+            <div>
                 {children}
             </div>
         </div>

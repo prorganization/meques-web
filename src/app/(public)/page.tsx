@@ -1,6 +1,24 @@
+"use client"
 
-export default async function Home() {
-  return (
-    <h1 className="mt-10 mb-6 font-light text-2xl text-white text-center">HOME WEBSITE</h1>
-  )
+import { useState } from 'react';
+
+import HomeSlider from "@/components/HomeSlider";
+import Slide1 from "@/components/home-slides/Slide1"
+import Slide2 from "@/components/home-slides/Slide2"
+import Slide3 from "@/components/home-slides/Slide3"
+import Slide4 from "@/components/home-slides/Slide4"
+import Slide5 from "@/components/home-slides/Slide5"
+
+
+
+export default function Home() {
+    const slides = [
+        <Slide1 />,
+        <Slide2 />,
+        <Slide3 />,
+        <Slide4 />,
+        <Slide5 />
+    ];
+
+    return <HomeSlider slides={slides}/>
 } 
