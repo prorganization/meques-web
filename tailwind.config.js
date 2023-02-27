@@ -15,6 +15,8 @@ module.exports = {
           "radial-gradient(50% 50% at 50% 100%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 30%, rgba(29, 26, 44, 0) 100%)",
         "social-dark-glow":
           "radial-gradient(50% 50% at 50% 100%, rgba(0, 0, 0, 0.65) 0%, rgba(29, 26, 44, 0) 100%)",
+        "player-center-gradient":
+          "linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, #211E2E 100%);"
       },
       boxShadow: {
         "auth-container": "1px 1px 20px 0px rgba(255, 255, 255, 0.1)",
