@@ -11,10 +11,13 @@ module.exports = {
         "quests": "url('/quests-bkg.png')",
         "homepage": "url('/hero-bkg.png')",
         "live-stream": "url('/live-stream-bkg.png')",
+        "support-player": "url('/support-player-bkg.png')",
         "social-light-glow":
           "radial-gradient(50% 50% at 50% 100%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 30%, rgba(29, 26, 44, 0) 100%)",
         "social-dark-glow":
           "radial-gradient(50% 50% at 50% 100%, rgba(0, 0, 0, 0.65) 0%, rgba(29, 26, 44, 0) 100%)",
+        "active-tab-glow":
+          "radial-gradient(50% 50% at 50% 100%, rgba(198, 174, 152, 0.2) 0%, rgba(29, 26, 44, 0) 100%)",
         "player-center-gradient":
           "linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, #211E2E 100%);"
       },
@@ -41,6 +44,9 @@ module.exports = {
           darker: "#1D1A2C",
           DEFAULT: "#442F6D",
           lighter: "#4B4665",
+        },
+        "accent-green": {
+            lighter: "#499A6E"
         },
         gold: {
           darker: "#726253",

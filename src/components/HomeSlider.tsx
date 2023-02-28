@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import Slide5 from './home-slides/Slide4';
 
 export default function HomeSlider({ slides }: any) {
     const [currentIndex, setCurrentIndex] = useState(0);
